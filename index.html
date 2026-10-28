@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mariya Jerome M Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#eef0ff;--surface:#fff;--ink:#1b1a3a;--muted:#5a5985;--accent:#3d3bf3;--accent-ink:#fff;--pop:#ff6b8b;--line:#d5d8f5;--hl:#e0e1ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14132e;--surface:#1e1d42;--ink:#edebff;--muted:#a9a8d6;--accent:#8f8dff;--accent-ink:#14132e;--pop:#ff8aa5;--line:#34336a;--hl:#2d2c63}}
+:root[data-theme="dark"]{--bg:#14132e;--surface:#1e1d42;--ink:#edebff;--muted:#a9a8d6;--accent:#8f8dff;--accent-ink:#14132e;--pop:#ff8aa5;--line:#34336a;--hl:#2d2c63}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pop);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{max-width:980px;margin:auto;display:flex;align-items:center;gap:6px;padding:10px 20px;overflow-x:auto}
+nav a{padding:6px 12px;border-radius:99px;text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);white-space:nowrap}
+nav a:hover,nav a.on{background:var(--hl);color:var(--ink)}
+#theme{margin-left:auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+main{max-width:980px;margin:auto;padding:0 20px}
+section{padding:64px 0 8px}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:24px}
+.hero{padding-top:48px}
+.hero h1{font-size:clamp(46px,10vw,104px);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:block;color:var(--accent)}
+.lede{max-width:560px;color:var(--muted);font-size:19px;margin:20px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.btn{display:inline-block;padding:11px 20px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid var(--accent);color:var(--accent)}
+.btn.fill{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+/* ask widget */
+.ask{background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:20px;box-shadow:8px 8px 0 var(--accent)}
+.ask h3{font-size:22px}.ask p.s{margin:4px 0 14px;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:99px;padding:6px 13px;font:inherit;font-size:14px;cursor:pointer}
+.chip:hover,.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.row{display:flex;gap:8px;margin-top:14px}
+.row input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:11px 14px;font:inherit}
+.row button{border:0;background:var(--ink);color:var(--bg);border-radius:12px;padding:0 18px;font:inherit;font-weight:700;cursor:pointer}
+#out{margin-top:16px;min-height:24px}
+.ans{background:var(--hl);border-radius:14px;padding:14px 16px}
+.ans b{display:block;margin-bottom:4px}
+.src{margin-top:8px;font-size:13px;color:var(--muted)}
+.bar{display:inline-block;height:6px;width:70px;background:var(--line);border-radius:9px;vertical-align:middle;margin-left:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--pop)}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;transition:opacity .2s,border-color .2s}
+.sk h3{font-size:18px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:2px 9px;font-size:14px}
+.dim .sk:not(.hit){opacity:.3}.sk.hit{border-color:var(--accent);border-width:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+/* timeline */
+.tl{border-left:3px solid var(--accent);margin-left:6px;padding-left:24px;position:relative}
+.tl::before{content:"";position:absolute;left:-10px;top:4px;width:17px;height:17px;border-radius:50%;background:var(--pop);border:3px solid var(--bg)}
+.when{color:var(--muted);font-size:15px;margin:2px 0 12px}
+ul{padding-left:20px;margin:0}li{margin:6px 0}
+/* projects */
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:14px}
+.proj summary{cursor:pointer;padding:18px 20px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.proj summary::-webkit-details-marker{display:none}
+.proj summary h3{font-size:22px}.proj summary small{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.proj summary::after{content:"+";font-size:28px;color:var(--accent);transition:transform .25s}
+.proj[open] summary::after{transform:rotate(45deg)}
+.proj .body{padding:0 20px 18px}
+.edu{display:grid;gap:12px}
+.edu div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.edu b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px}.edu span{color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.contact{background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:36px 28px;margin:64px 0 32px}
+.contact h2{margin-bottom:12px}.contact a{font-weight:700;display:block;margin:4px 0;word-break:break-all}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:0 0 32px}
+body{overflow-x:hidden}
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),var(--pop));z-index:20}
+.glow{position:fixed;left:0;top:0;width:360px;height:360px;margin:-180px 0 0 -180px;border-radius:50%;background:radial-gradient(circle,var(--accent) 0,transparent 65%);opacity:.18;pointer-events:none;z-index:0;transition:transform .15s ease-out}
+main,header{position:relative;z-index:1}header{position:sticky}
+.hero{position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.45;z-index:-1;animation:float 9s ease-in-out infinite}
+.b1{width:260px;height:260px;background:var(--pop);right:-60px;top:20px}
+.b2{width:220px;height:220px;background:var(--accent);right:140px;top:300px;animation-delay:-4s}
+@keyframes float{50%{transform:translate(-30px,40px) scale(1.15)}}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:200% 0}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(.4) translateY(8px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--pop)}100%{box-shadow:0 0 0 16px transparent}}
+@keyframes drift{to{background-position:200% 50%}}
+.hero h1{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span{min-height:1.1em;background:linear-gradient(90deg,var(--accent),var(--pop),var(--accent));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+#typed::after{content:"|";-webkit-text-fill-color:var(--pop);animation:blink 1s steps(2) infinite}
+.lede,.btns,.stats,.ask{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.lede{animation-delay:.2s}.btns{animation-delay:.35s}.stats{animation-delay:.5s}.ask{animation-delay:.65s}
+.btn{transition:transform .2s,box-shadow .2s,background .2s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 10px 24px -8px var(--accent)}
+.btn.fill::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .6s}
+.btn.fill:hover::after{transform:translateX(120%)}
+nav a{transition:background .2s,color .2s,transform .2s}nav a:hover{transform:translateY(-2px)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.stats div{flex:1 1 120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;transition:transform .25s,border-color .25s}
+.stats div:hover{transform:translateY(-6px) rotate(-1.5deg);border-color:var(--pop)}
+.stats b{display:block;font:800 34px/1 "Bricolage Grotesque",sans-serif;color:var(--accent)}.stats span{font-size:14px;color:var(--muted)}
+.ask{transition:transform .25s,box-shadow .25s}.ask:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--accent)}
+.ans{animation:rise .5s both}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.sk,.proj,.edu div{transition:transform .2s ease-out,box-shadow .25s,border-color .25s,opacity .2s}
+.sk:hover,.proj:hover,.edu div:hover{box-shadow:0 14px 30px -14px var(--accent);border-color:var(--accent)}
+.sk.seen .tags span{animation:pop .45s both;animation-delay:calc(var(--i)*70ms)}
+.tags span{transition:background .2s,transform .2s}.tags span:hover{background:var(--accent);color:var(--accent-ink);transform:translateY(-3px) rotate(-3deg)}
+.tl::before{animation:pulse 1.8s infinite}
+.tl{background:linear-gradient(var(--accent),var(--pop)) left top/3px 0 no-repeat;}
+.contact{background:linear-gradient(120deg,var(--accent),var(--pop),var(--accent));background-size:200% 100%;animation:drift 8s linear infinite}
+.contact a{transition:transform .2s}.contact a:hover{transform:translateX(10px)}
+@media (hover:none){.glow{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.glow{display:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div><div class="glow" id="glow"></div>
+<header><nav aria-label="Sections">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Toggle dark mode">Theme</button></nav></header>
+<main>
+<section class="hero" id="about"><div class="blob b1"></div><div class="blob b2"></div>
+<h1>Mariya Jerome M<span id="typed">builds web apps with AI inside.</span></h1>
+<p class="lede">MCA graduate and full stack developer from Chennai. I build with Next.js, React and Convex, and I’m growing into GenAI: LLM APIs, embeddings and RAG. Open to entry-level GenAI, AI application and full stack roles.</p>
+<div class="btns"><a class="btn fill" href="#projects">See projects</a><a class="btn" href="#contact">Get in touch</a><a class="btn" href="https://www.linkedin.com/in/mariya-jerome-m" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/mariya-jerome" target="_blank" rel="noopener">GitHub</a></div>
+<div class="stats"><div><b data-n="8.05" data-d="2">8.05</b><span>MCA CGPA</span></div><div><b data-n="6">6</b><span>month internship</span></div><div><b data-n="2">2</b><span>projects</span></div><div><b data-n="4">4</b><span>languages</span></div></div>
+<div class="ask">
+<h3>Ask my resume</h3>
+<p class="s">A tiny RAG demo: your question is matched to resume chunks by similarity, then answered from the best match.</p>
+<div class="chips" id="sugg"></div>
+<form class="row" id="f"><input id="q" placeholder="e.g. What did you do at ADigiElite?" aria-label="Your question"><button>Ask</button></form>
+<div id="out" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="filters" id="filters" role="group" aria-label="Highlight skills"></div>
+<div class="skills" id="skills-grid"></div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="tl">
+<h3>Full Stack Developer Intern</h3>
+<p class="when">ADigiElite, Dindigul · Dec 2025 – May 2026</p>
+<ul>
+<li>Developed and deployed full-stack web applications using Next.js and React.</li>
+<li>Built reusable UI components with Tailwind CSS and ShadCN UI.</li>
+<li>Implemented backend logic and real-time data handling using Convex.</li>
+<li>Designed secure authentication workflows and protected routes.</li>
+<li>Improved performance through server-side rendering and API integrations.</li>
+</ul></div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<details class="proj" open>
+<summary><div><h3>AI-Powered Document QA Assistant</h3><small>Python · LLM API · Embeddings · RAG</small></div></summary>
+<div class="body"><ul>
+<li>Upload a document and ask questions about its content.</li>
+<li>Basic RAG workflow: text chunking, embeddings, similarity search and prompt-based answers.</li>
+<li>An LLM API writes natural-language answers from the retrieved context.</li>
+<li>Prompts are designed to cut irrelevant responses and keep answers grounded in the document.</li></ul></div>
+</details>
+<details class="proj">
+<summary><div><h3>FDP Connect</h3><small>Faculty Development Programs · Jan 2026 · Next.js · Tailwind CSS · ShadCN UI · Convex</small></div></summary>
+<div class="body"><ul>
+<li>A management system for faculty development programs.</li>
+<li>Secure user authentication with role-based access control.</li>
+<li>Real-time data management with Convex Database.</li>
+<li>Responsive interfaces built with Next.js, Tailwind CSS and ShadCN UI.</li></ul></div>
+</details>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="edu">
+<div><b>MCA</b><span>Mepco Schlenk Engineering College, Anna University · 2024–2026 · CGPA 8.05</span></div>
+<div><b>B.Sc. Computer Science</b><span>The American College, Kamarajar University · 2021–2024 · CGPA 7.02</span></div>
+<div><b>HSC</b><span>St. Mary’s Hr. Sec. School · 2020–2021 · 83.45%</span></div>
+<div><b>SSLC</b><span>St. Mary’s Hr. Sec. School · 2018–2019 · 74.8%</span></div>
+</div>
+<div class="two" style="margin-top:32px">
+<div><h3 style="margin-bottom:10px">Certifications</h3><ul><li>Introduction to Internet of Things – NPTEL (65%)</li><li>Introduction to Cloud Computing</li><li>Java (Basic) – HackerRank</li><li>English for Technical Professionals – IEEE</li></ul></div>
+<div><h3 style="margin-bottom:10px">Beyond code</h3><ul><li>Organized and coordinated a Treasure Hunt during the college technical fest.</li><li>Languages: English (professional working), Tamil (native).</li></ul></div>
+</div>
+</section>
+
+<div class="contact" id="contact">
+<h2>Let’s work together</h2>
+<p>Based in Chennai, Tamil Nadu. Reach me here:</p>
+<a href="mailto:mariyajerome159@gmail.com">mariyajerome159@gmail.com</a>
+<a href="tel:+919361436957">+91 9361436957</a>
+<a href="https://github.com/mariya-jerome" target="_blank" rel="noopener">github.com/mariya-jerome</a>
+<a href="https://www.linkedin.com/in/mariya-jerome-m" target="_blank" rel="noopener">linkedin.com/in/mariya-jerome-m</a>
+</div>
+</main>
+<footer>© 2026 Mariya Jerome M</footer>
+
+<script>
+const skills={
+"GenAI / AI":["Generative AI fundamentals","LLM concepts","Prompt engineering","AI API integration","Embeddings & vector search (basic)","RAG (basic)"],
+"Frontend":["HTML","CSS","React.js","Next.js","Tailwind CSS","ShadCN UI"],
+"Backend & data":[".NET","ASP.NET MVC Core","PHP","Convex","MySQL"],
+"Languages":["Python","JavaScript","C#","C"],
+"Tools":["Visual Studio 2022","GitHub","XAMPP"],
+"Soft skills":["Problem solving","Team collaboration","Communication","Adaptability"]};
+const grid=document.getElementById("skills-grid"),fl=document.getElementById("filters");
+grid.innerHTML=Object.entries(skills).map(([k,v])=>`<div class="sk" data-k="${k}"><h3>${k}</h3><div class="tags">${v.map(t=>`<span>${t}</span>`).join("")}</div></div>`).join("");
+let active=null;
+function mkFilters(){fl.innerHTML=Object.keys(skills).map(k=>`<button class="chip" aria-pressed="${active===k}" data-k="${k}">${k}</button>`).join("");}
+mkFilters();
+fl.onclick=e=>{const k=e.target.dataset.k;if(!k)return;active=active===k?null:k;mkFilters();
+grid.classList.toggle("dim",!!active);grid.querySelectorAll(".sk").forEach(c=>c.classList.toggle("hit",c.dataset.k===active));};
+
+const chunks=[
+{t:"Summary",k:"who summary about yourself introduce role looking seeking job hire mca graduate full stack developer genai interested",a:"Mariya is an MCA graduate and full stack developer who builds with Next.js, React, Tailwind CSS and Convex. She’s interested in Generative AI and is seeking an entry-level GenAI, AI application or full stack role."},
+{t:"Experience",k:"experience intern internship adigiElite work job company dindigul did role responsibilities",a:"Mariya was a Full Stack Developer Intern at ADigiElite, Dindigul (Dec 2025 – May 2026). She built and deployed Next.js and React apps, made reusable UI with Tailwind and ShadCN UI, used Convex for real-time data, and built secure authentication with protected routes."},
+{t:"Experience",k:"performance server side rendering authentication secure protected api",a:"At ADigiElite she designed secure authentication workflows and protected routes, and improved performance through server-side rendering and API integrations."},
+{t:"Project: Document QA",k:"ai genai rag document qa question answering project llm embeddings chunking similarity prompt python",a:"The AI-Powered Document QA Assistant lets users upload a document and ask questions. It chunks text, creates embeddings, runs similarity search, and sends the retrieved context to an LLM API. Prompts keep answers grounded in the uploaded content."},
+{t:"Project: FDP Connect",k:"fdp connect faculty development program project management role access authentication nextjs convex",a:"FDP Connect (Jan 2026) is a Faculty Development Program management system built with Next.js, Tailwind CSS, ShadCN UI and Convex. It has secure authentication, role-based access control and real-time data."},
+{t:"Skills",k:"skills tech stack technologies languages programming frameworks tools know use",a:"Languages: Python, JavaScript, C# and C. Frontend: HTML, CSS, React.js, Next.js. Backend: .NET, ASP.NET MVC Core, PHP, Convex. Database: MySQL. GenAI: LLM concepts, prompt engineering, AI API integration, basic embeddings and RAG."},
+{t:"Education",k:"education degree college university cgpa mca bachelor school study graduate marks",a:"MCA at Mepco Schlenk Engineering College, Anna University (2024–2026, CGPA 8.05). Bachelor of Computer Science at The American College (2021–2024, CGPA 7.02). HSC 83.45% and SSLC 74.8%."},
+{t:"Certifications",k:"certifications certificate course nptel hackerrank ieee cloud iot java english",a:"Certifications: Introduction to Internet of Things (NPTEL, 65%), Introduction to Cloud Computing, Java (Basic) from HackerRank, and English for Technical Professionals from IEEE."},
+{t:"Contact",k:"contact email phone reach linkedin github location chennai where hire",a:"Mariya is based in Chennai, Tamil Nadu. Email: mariyajerome159@gmail.com. Phone: +91 9361436957. GitHub and LinkedIn: mariya-jerome."},
+{t:"Extras",k:"achievements workshops treasure hunt event languages english tamil soft skills teamwork",a:"She organized and coordinated a Treasure Hunt at the college technical fest. She speaks English (professional working proficiency) and Tamil (native)."}];
+const tok=s=>s.toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(w=>w.length>2);
+const stop=new Set("the and for what you your are did does how about tell with that have this from".split(" "));
+function ask(q){const w=tok(q).filter(x=>!stop.has(x));const out=document.getElementById("out");
+if(!w.length){out.innerHTML="";return}
+let best=null,bs=0;for(const c of chunks){const kw=tok(c.k+" "+c.t);let s=0;for(const x of w){if(kw.some(y=>y===x||(x.length>3&&(y.startsWith(x)||x.startsWith(y)))))s++}
+s=s/Math.max(w.length,1);if(s>bs){bs=s;best=c}}
+out.innerHTML=best&&bs>0?`<div class="ans"><b>${best.t}</b>${best.a}</div><div class="src">Retrieved chunk: ${best.t} · similarity ${bs.toFixed(2)}<span class="bar"><i style="width:${Math.min(100,bs*100)}%"></i></span></div>`
+:`<div class="ans">No close match in the resume. Try asking about skills, projects, experience, education or contact details.</div>`;}
+const sg=document.getElementById("sugg");
+["What did you do at ADigiElite?","Tell me about the RAG project","What is your tech stack?","What is your CGPA?"].forEach(s=>{const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=s;b.onclick=()=>{document.getElementById("q").value=s;ask(s)};sg.appendChild(b)});
+document.getElementById("f").onsubmit=e=>{e.preventDefault();ask(document.getElementById("q").value)};
+
+const root=document.documentElement,tb=document.getElementById("theme");
+tb.onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;root.dataset.theme=dark?"light":"dark"};
+const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const ty=document.getElementById("typed"),full=ty.textContent;
+if(!rm){ty.textContent="";let i=0;setTimeout(function t(){ty.textContent=full.slice(0,++i);if(i<full.length)setTimeout(t,50)},700)}
+document.querySelectorAll(".sk .tags").forEach(g=>[...g.children].forEach((s,i)=>s.style.setProperty("--i",i)));
+const rvs=document.querySelectorAll(".sk,.proj,.edu div,.tl,.two>div,.contact,h2");
+if(!rm){rvs.forEach(e=>e.classList.add("rv"));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add("in","seen");ro.unobserve(el);setTimeout(()=>el.classList.remove("rv","in"),900)}),{threshold:.15});
+rvs.forEach(e=>ro.observe(e))}else rvs.forEach(e=>e.classList.add("seen"));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const el=e.target,n=+el.dataset.n,d=+(el.dataset.d||0);if(rm)return;let s=null;const st=t=>{s=s||t;const p=Math.min((t-s)/1200,1);el.textContent=(n*(1-Math.pow(1-p,3))).toFixed(d);if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}));
+document.querySelectorAll("[data-n]").forEach(e=>co.observe(e));
+const prog=document.getElementById("prog");
+addEventListener("scroll",()=>{const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+"%"},{passive:true});
+const gl=document.getElementById("glow");
+addEventListener("pointermove",e=>{gl.style.transform=`translate(${e.clientX}px,${e.clientY}px)`});
+document.querySelectorAll(".sk,.proj,.edu div").forEach(c=>{if(rm)return;c.addEventListener("pointermove",e=>{if(e.pointerType==="touch"||c.classList.contains("rv"))return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-3px)`});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
+const links=[...document.querySelectorAll("nav a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section[id],#contact").forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
